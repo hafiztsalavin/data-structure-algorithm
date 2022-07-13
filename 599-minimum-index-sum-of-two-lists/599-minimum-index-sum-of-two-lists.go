@@ -11,9 +11,6 @@ func findRestaurant(list1 []string, list2 []string) []string {
         if value, restaurant := mapRestaurant[restaurant2]; restaurant{
             tempMax := (i+1)+value
             
-            
-            fmt.Println(restaurant2, tempMax)    
-
             if tempMax < max {
                 max = tempMax
                 result = result[:0]
