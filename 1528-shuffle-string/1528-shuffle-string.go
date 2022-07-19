@@ -1,16 +1,12 @@
 func restoreString(s string, indices []int) string {
     size := len(indices)
-    resultArr := make([]string, size)
-    result := ""
+    resultArr := make([]byte, size)
+
     
     for i:=0; i < size; i++{
-        resultArr[indices[i]] = string(s[i])
+        resultArr[indices[i]] = s[i]
     }
     
-    for _, value := range resultArr{
-        result = result + value
-    }
     
-    return result
-    
+    return string(resultArr)    
 }
