@@ -1,11 +1,13 @@
 func maxProfit(prices []int) int {
+
     maxSell, min := 0, prices[0]
-    for i := 1; i < len(prices); i++ {
-        if price < min {
+
+    for _, price := range prices{
+        if price < min{
             min = price
         } else if price - min > maxSell {
-            maxSell = price
+            maxSell = price - min
         }
     }
-   return maxSell
+    return maxSell
 }
